@@ -38,4 +38,45 @@ public class SquaresOfSortedArray {
 /**
  * use 2 pointers, on each pass, square and check for the greater one and add greater one at last pos (idx) of new array
  * once added the greater one, move the added pointer ahead to check if next squared element at same ptr is greater, and vice versa
+ *
+ * Core Rule of Thumb (Memorize This)
+ * Use <= when the middle element still needs to be processed.
+ * Use < when pairs are processed together and the middle does NOT need special handling.
+ */
+
+/**
+ * 🧠 General 2-Pointer Patterns (Interview Gold)
+ * 1️⃣ Processing Every Element Once
+ * Examples:
+ * Squares of Sorted Array
+ * Move Zeroes
+ * Remove Duplicates
+ * ➡️ Condition: while (left <= right) or single pointer loop
+ * Reason:
+ * Every element must be handled, including the middle one
+
+ * 2️⃣ Processing Pairs of Elements
+ * Examples:
+ * Container With Most Water
+ * Two Sum II
+ * Palindrome Check
+ * ➡️ Condition: while (left < right)
+ * Reason:
+ * When pointers meet, no valid pair remains
+
+ * 3️⃣ Search / Matching Problems
+ * Examples:
+ * Two Sum II
+ * Valid Palindrome
+ * ➡️ Condition: while (left < right)
+ * Reason:
+ * You compare two distinct indices
+
+ * 4️⃣ Partition / Rearrangement Problems
+ * Examples:
+ * Sort Colors
+ * Partition Labels
+ * Dutch National Flag
+ * ➡️ Depends on whether mid needs processing
+ * Often <= when mid is meaningful
  */

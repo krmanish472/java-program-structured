@@ -15,12 +15,16 @@ public class SegregateZeroesAndOnes {
         int rightPtr = arr.length - 1;
 
         while (leftPtr < rightPtr) {
+            // if 0 is present in left, it's in correct position, continue
             while (leftPtr < rightPtr && arr[leftPtr] == 0) {
                 leftPtr++;
             }
+            // if 1 is present in right, it's in correct position, continue
             while (leftPtr < rightPtr && arr[rightPtr] == 1) {
                 rightPtr--;
             }
+
+
             swap(arr, leftPtr, rightPtr);
         }
     }
