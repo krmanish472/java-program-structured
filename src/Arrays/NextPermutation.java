@@ -1,4 +1,4 @@
-package LeetCode.TwoPointer.Medium;
+package Arrays;
 
 import java.util.Arrays;
 
